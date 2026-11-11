@@ -1,0 +1,36 @@
+from ezdict import EZDict
+
+args_rc = EZDict({
+    "seed": 1024,
+    "query": True,
+    "classification": True,
+    "dim_reduce": True,
+    "simulation": True,
+    "batch_size": 128,
+    "epochs": 30,
+    "lr": 1e-4,
+    "z_dim": 64,
+    "hidden_dim": 150,
+    "latent_dim": 64,
+    "cl_loss_weight": 0.01,
+    "tau": 0.2,
+    "gan_w": 0.1,
+    "mi_w": 0.1,
+    "recon_w": 1,
+    "cls_loss_weight": 0.5,
+    "critic_hidden_dim": 128,
+    "critic_layers": 2,
+    'n_clusters': 11,
+    "cross_modal": 0.2,
+    "encoder": {
+        "input": 300,
+        "hiddens": [256, 128],
+        "output": 64,
+        "use_biases": [True, True, True],
+        "dropouts": [0, 0, 0],
+        "activations": ["relu", "relu", "relu"],
+        "use_batch_norms": [True, True, True],
+        "use_layer_norms": [True, True, True],
+        "is_binary_input": False,
+    }
+})
